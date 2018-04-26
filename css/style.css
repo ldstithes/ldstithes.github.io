@@ -1,0 +1,335 @@
+body {
+    background-color:#f2c57c;
+    color: #071108;
+}
+
+.mobile-only {
+    display:none;
+    
+}
+
+a[href*="//"]::after  {
+    content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
+    margin: 0 0 0 5px;
+  }
+
+  .banner {
+    position: absolute;
+    left: 0;
+    height: 66.5%;
+  }
+
+header {
+    color:#F7FFF7;
+    background-color:#364652 !important;
+    max-width:100%;
+    padding:58px;
+    background: url("/images/nelson-banner.jpg") no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
+
+header > * {
+    text-align:top;
+}
+
+header small {
+    float:right;
+}
+
+.container {
+    font: 1.2em Helvetica, arial, sans-serif;
+}
+
+.companies {
+    padding: 30px;
+}
+
+.content {
+    background-color:#F7FFF7;
+    padding:0 20px;
+}
+
+.one {
+    padding-top:30px;
+    background-color:#DBCDC6;
+}
+
+.one h2 {
+    font-size:2.5vw;
+}
+
+.two {
+    padding: 20px 200px;
+    background-color:#628395;
+    color:#F7FFF7;
+    position:relative;
+    z-index:2;
+}
+
+.three p {
+    padding:150px 50px;
+    font-size:3rem;
+    text-align:center;
+}
+
+.factsheet {
+    position: absolute;
+    overflow: visible;
+    /* so we can see the pseudo-elements we're going to add to the anchor */
+  
+    font-size: 18px;
+    /* font-size and line-height must be equal so we can account for the height of the banner */
+  
+    line-height: 18px;
+
+    max-width:100%;
+
+    padding-left:75px;
+  }
+  
+  .factsheet p {
+    line-height:10px;
+    font-size:2vw;
+    display: block;
+    padding: 25px;
+    margin:15px 0;
+    position: relative;
+    /* allows us to position our pseudo-elements properly */
+    background: #364652;
+    color:#F7FFF7;
+    overflow: visible;
+    height: 58px;
+    text-decoration: none;
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    -moz-box-shadow:2px 2px 2px rgba(0, 0, 0, .3);
+    -webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, .3); */
+  }
+  
+  .factsheet p:before {
+    /* this creates the "forked" part of our ribbon */
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -29px;
+    border-top: 29px solid #364652;
+    border-bottom: 29px solid #364652;
+    border-right: 29px solid transparent;
+    border-left: 29px solid transparent;
+  }
+
+  p.contrast {
+      background: #ED6A5A;
+      color: #F7FFF7;
+      margin-right:-28px;
+      margin-left:28px;
+  }
+
+  p.contrast:before {
+    left: -29px;
+    border-top: 29px solid #ED6A5A;
+    border-bottom: 29px solid #ED6A5A;
+    border-right: 29px solid transparent;
+    border-left: 29px solid transparent;
+  }
+
+  p.contrast span.figure {
+    color:  #364652;
+  }
+
+.factsheet a {
+    text-decoration:none;
+    color:inherit;
+}
+
+.factsheet a:hover {
+    color:#f2c57c;
+}
+
+.figure {
+    color:#ED6A5A;
+}
+
+.sm {
+    display:none;
+}
+
+.credit {
+    font-size:1rem;
+    vertical-align:top;
+}
+
+.credit:before {
+    content: '\2014';
+}
+
+.blockquotes {
+    line-height:25px;
+}
+
+.blockquotes img {
+    padding:25px;
+    max-width:100%;
+}
+
+blockquote {
+    margin-bottom:15px;
+}
+
+.author {
+    display:block;
+    text-align:right;
+}
+
+.author span {
+    display:block;
+    font-weight:bold;
+    color:#f2c57c;
+    font-size:1.4rem;
+    padding: 12px 0 0 0;
+}
+
+.author a {
+    text-decoration:none;
+    color:inherit;
+}
+
+.author a:hover {
+    color:#f2c57c;
+}
+
+.companies {
+    font-size: .99rem;
+}
+
+footer {
+    background: #364652;
+    height:100px;
+}
+
+@media screen and (max-width:1100px) {
+    .factsheet {
+        padding-left: initial;
+    }
+    .one h2 {
+        text-align:center;
+    }
+    .two {
+        padding:15px 100px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .factsheet {
+        top: 430px;
+    }
+}
+
+@media screen and (max-width:913px) {
+    .factsheet {
+        top: 480px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    header {
+        padding:50px;
+    }
+
+    .blockquotes img {
+        padding:0;
+        width:100%;
+    }
+
+    .one h2 {
+        font-size: 7vw;
+    }
+
+    .two {
+        padding:15px;
+    }
+
+    .factsheet {
+        position: initial;
+        max-width:100%;
+        padding-bottom:30px;
+      }
+      
+      .factsheet p {
+        font-size:1rem;
+      }
+      
+      .factsheet p:before {
+        /* remove "forked" part of ribbon */
+        content: none;
+      }
+
+      p.contrast {
+        margin:initial;
+      }
+
+      .credit {
+        font-size:.8rem;
+        line-height:25px;
+        float:right;
+      }
+}
+
+@media screen and (max-width:480px) {
+    header h1 {
+        text-align:center;
+        max-width:90vw;
+        font-size:8vw;
+    }
+    header small {
+        float:left;
+    }
+    header blockquote {
+        max-width:90vw;
+        margin-top:-30px;
+    }
+    header {
+        padding:15px;
+        background:none;
+    }
+
+    .mobile-only {
+        display:block !important;
+    }
+
+    img.mobile-only {
+        width:90vw;
+        margin-top: -30px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .factsheet p {
+        padding-top:22px;
+    }
+    .credit {
+        font-size:.7rem;
+    }
+    .sm {
+        display:block;
+    }
+    .author {
+        text-align:left;
+        font-size:.88rem;
+        line-height:20px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .factsheet p {
+        font-size:.8em;
+        padding-top:20px;
+    }
+    .credit {
+        font-size:.65rem;
+    }
+}

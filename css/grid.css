@@ -1,0 +1,116 @@
+*:not(ul){
+    box-sizing: border-box;
+    padding:0;
+    margin:0; 
+  }
+
+.header-main { grid-area: h; }
+.companies { grid-area: a; }
+.one { grid-area: c; }
+.two { grid-area: t; }
+/* .three { grid-area: th; } */
+.footer-main { grid-area: f; }
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'h h h h'
+        '. a c c'
+        't t t t'
+        /* 'th th th th' */
+        'f f f f';
+    grid-template-columns: 0.25fr 1fr 1fr 1fr;
+    /* grid-gap: 20px; */
+    margin: 0 auto;
+}
+
+header {
+    display:grid;
+    grid-gap:50px;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+header h1 {
+    grid-column: 3 / -1;
+}
+
+header blockquote {
+    align-self: center;
+    grid-column: 3 / 8;
+}
+
+.blockquotes {
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items:center;
+    grid-auto-flow: column;
+}
+
+.blockquotes img:nth-of-type(odd) {
+    grid-column: 1 / 3;
+    justify-self:right;
+}
+
+.blockquotes blockquote:nth-of-type(odd) {
+    grid-column: 3 / -1;
+}
+
+.blockquotes blockquote:nth-of-type(even) {
+    grid-column: 1 / 3;
+}
+
+.blockquotes img:nth-of-type(even) {
+    grid-column: 3 / -1;
+}
+
+@media screen and (max-width:1150px) {
+    header h1 {
+        grid-column: 4 / -1;
+    }
+    
+    header blockquote {
+        align-self: center;
+        grid-column: 4 / -1;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .container {
+        grid-template-areas:
+        'h h h h'
+        'c c c c'
+        't t t t'
+        'a a a a'
+        /* 'th th th th' */
+        'f f f f';
+
+    }
+
+    header h1 {
+        grid-column: 1 / -1;
+    }
+    
+    header blockquote {
+        align-self: center;
+        grid-column: 1 / -1;
+    }
+  
+    .blockquotes img:nth-of-type(odd) {
+        grid-column: 1 / -1;
+    }
+    
+    .blockquotes blockquote:nth-of-type(odd) {
+        grid-column: 1 / -1;
+    }
+    
+    .blockquotes blockquote:nth-of-type(even) {
+        grid-column: 1 / -1;
+    }
+    
+    .blockquotes img:nth-of-type(even) {
+        grid-column: 1 / -1;
+    }
+}
+
