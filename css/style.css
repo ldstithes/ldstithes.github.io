@@ -104,9 +104,6 @@ header small {
     height: 58px;
     text-decoration: none;
     border-radius: 5px;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
-    -moz-box-shadow:2px 2px 2px rgba(0, 0, 0, .3);
-    -webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, .3); */
   }
   
   .factsheet p:before {
