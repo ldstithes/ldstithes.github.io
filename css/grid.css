@@ -8,6 +8,7 @@
 .companies { grid-area: a; }
 .one { grid-area: c; }
 .two { grid-area: t; }
+.three { grid-area: th; }
 .footer-main { grid-area: f; }
 
 .container {
@@ -16,6 +17,7 @@
         'h h h h'
         '. a c c'
         't t t t'
+        'th th th th'
         'f f f f';
     grid-template-columns: 0.25fr 1fr 1fr 1fr;
     margin: 0 auto;
@@ -80,7 +82,7 @@ header blockquote {
         'c c c c'
         't t t t'
         'a a a a'
-        /* 'th th th th' */
+        'th th th th'
         'f f f f';
 
     }

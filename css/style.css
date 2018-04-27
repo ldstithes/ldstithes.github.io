@@ -69,12 +69,6 @@ header small {
     z-index:2;
 }
 
-.three p {
-    padding:150px 50px;
-    font-size:3rem;
-    text-align:center;
-}
-
 .factsheet {
     position: absolute;
     overflow: visible;
@@ -205,11 +199,38 @@ blockquote {
     font-size: .99rem;
 }
 
+.close {
+    width:100%;
+    text-align:center;
+    background-color:#F7FFF7;
+    color:#364652;
+    padding:50px;
+}
+
+.close p {
+    font-size:.99em;
+    padding: 10px 5vw;
+}
+
+.stinger {
+    font-size:2rem !important;
+    color:#ED6A5A;
+}
+
+.stinger small {
+    color:#364652;
+    font-size:1rem !important;
+}
+
 footer {
     background: #364652;
     text-align:center;
     color:#F7FFF7;
-    padding:20px;
+    padding:30px 20px 10px 20px;
+}
+
+footer small {
+    padding-bottom:20px;
 }
 
 footer a {
@@ -225,6 +246,7 @@ footer a:hover {
     display:flex;
     max-width:100%;
     padding-left:0;
+    padding-top:15px;
 }
 
 .footer-main ul li {
@@ -293,6 +315,14 @@ footer a:hover {
         line-height:25px;
         float:right;
       }
+
+      .close {
+        padding: 0;
+        padding-top:10px;
+      }
+   .stinger {
+          font-size:8vw !important;
+      }
       .footer-main ul {
         display:block;
       }
@@ -333,6 +363,15 @@ footer a:hover {
     img.mobile-only {
         width:90vw;
         margin-top: -30px;
+    }
+    .close p {
+        text-align:left;
+    }
+    .stinger {
+        text-align:center !important;
+    }
+    .stinger small {
+        font-size:4vw !important;
     }
 }
 
