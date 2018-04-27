@@ -226,7 +226,7 @@ footer {
     background: #364652;
     text-align:center;
     color:#F7FFF7;
-    padding:30px 20px 10px 20px;
+    padding:40px 20px;
 }
 
 footer small {
@@ -246,7 +246,6 @@ footer a:hover {
     display:flex;
     max-width:100%;
     padding-left:0;
-    padding-top:15px;
 }
 
 .footer-main ul li {
