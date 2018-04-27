@@ -247,12 +247,6 @@ footer a:hover {
 
 @media screen and (max-width:990px) {
     .factsheet {
-        top: 475px;
-    }
-}
-
-@media screen and (max-width:913px) {
-    .factsheet {
         top: 480px;
     }
 }
