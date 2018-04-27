@@ -15,7 +15,7 @@ a[href*="//"]::after:not(.footer-main)  {
 
 
 
-  .banner {
+.banner {
     position: absolute;
     left: 0;
     height: 66.5%;
@@ -247,7 +247,7 @@ footer a:hover {
 
 @media screen and (max-width:990px) {
     .factsheet {
-        top: 430px;
+        top: 475px;
     }
 }
 
