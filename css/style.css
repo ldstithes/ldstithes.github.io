@@ -8,12 +8,14 @@ body {
     
 }
 
-a[href*="//"]::after:not(.footer-main)  {
+a[href*="//"]::after {
     content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
     margin: 0 0 0 5px;
   }
 
-
+.footer-main a::after {
+    content:none;
+}
 
 .banner {
     position: absolute;
@@ -45,11 +47,50 @@ header small {
 
 .companies {
     padding: 30px;
+    padding-left:0;
+}
+
+.companies a {
+    text-decoration:none;
+    color:#071108;
+}
+
+.companies a:hover {
+    color:#628395;
+}
+
+.companies {
+    font-size: .99rem;
+}
+
+.comp-list{
+    padding-left:0;
+}
+
+.companies ul > ul {
+    padding-left:initial;
+}
+
+.companies ul li {
+    list-style:none;
+    font-size:1.2rem;
+}
+
+.companies ul > li li {
+    list-style:initial;
+    font-size:initial;
+}
+
+.companies ul > li li li{
+    list-style:circle;
+}
+
+.companies ul > li li li li{
+    list-style:square;
 }
 
 .content {
     background-color:#F7FFF7;
-    padding:0 20px;
 }
 
 .one {
@@ -59,6 +100,24 @@ header small {
 
 .one h2 {
     font-size:2.5vw;
+    padding-left:20px;
+}
+
+.one .blockquotes {
+    font-size:.9em;
+    margin-top:30px;
+    padding:0 20px 600px 20px;
+    position:absolute;
+    top:880px;
+    background-color:#F7FFF7;
+}
+
+.one .blockquotes .author span {
+    color:#364652;
+}
+
+.one .blockquotes .author a:hover {
+    color:#628395;
 }
 
 .two {
@@ -195,8 +254,39 @@ blockquote {
     color:#f2c57c;
 }
 
-.companies {
-    font-size: .99rem;
+.snow {
+    display:flex;
+    align-items:center;
+    background-color:#DBCDC6;
+    padding:20px 10%;
+}
+
+.snow h3 {
+    padding-bottom:15px;
+}
+
+.snow h3 span {
+    font-size:1rem;
+    font-weight:normal;
+}
+
+.snow .author span {
+    color:#071108;
+}
+
+.snow a:hover {
+    color:#ED6A5A;
+}
+
+.snow img {
+    order:1;
+    width:300px;
+    height:auto;
+}
+
+.snow-content {
+    order:2;
+    padding:30px;
 }
 
 .close {
@@ -255,20 +345,22 @@ footer a:hover {
 }
 
 @media screen and (max-width:1100px) {
-    .factsheet {
-        padding-left: initial;
-    }
     .one h2 {
         text-align:center;
     }
     .two {
         padding:15px 100px;
     }
+    .one .blockquotes {
+        top: 1000px;
+    }
 }
 
 @media screen and (max-width:990px) {
     .factsheet {
         top: 480px;
+        padding-left:10px;
+        padding-right:10px;
     }
 }
 
@@ -284,6 +376,10 @@ footer a:hover {
 
     .one h2 {
         font-size: 7vw;
+    }
+
+    .one .blockquotes {
+        padding:20px;
     }
 
     .two {
@@ -305,6 +401,14 @@ footer a:hover {
         content: none;
       }
 
+      .one .blockquotes {
+          position:initial;
+      }
+
+      .comp-list li {
+          padding: 5px 0;
+      }
+
       p.contrast {
         margin:initial;
       }
@@ -313,6 +417,15 @@ footer a:hover {
         font-size:.8rem;
         line-height:25px;
         float:right;
+      }
+
+      .snow {
+        flex-flow:row wrap;
+      }
+
+      .snow img {
+          display:block;
+          margin:0 auto;
       }
 
       .close {
@@ -354,7 +467,9 @@ footer a:hover {
         padding:15px;
         background:none;
     }
-
+    .companies{
+        padding-left:20px;
+    }
     .mobile-only {
         display:block !important;
     }
@@ -375,6 +490,10 @@ footer a:hover {
 }
 
 @media screen and (max-width:460px) {
+    .factsheet {
+        padding-left:5px;
+        padding-right:5px;
+    }
     .factsheet p {
         padding-top:22px;
     }
@@ -388,6 +507,12 @@ footer a:hover {
         text-align:left;
         font-size:.88rem;
         line-height:20px;
+    }
+    .snow .author a {
+        font-size:6vw;
+    }
+    .snow {
+        padding:10px;
     }
 }
 

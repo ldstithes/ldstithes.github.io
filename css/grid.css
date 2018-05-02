@@ -72,6 +72,21 @@ header blockquote {
         align-self: center;
         grid-column: 4 / -1;
     }
+    .one .blockquotes img:nth-of-type(odd) {
+        grid-column: 2 / -2;
+    }
+    
+    .one .blockquotes blockquote:nth-of-type(odd) {
+        grid-column: 2 / -2;
+    }
+    
+    .one .blockquotes blockquote:nth-of-type(even) {
+        grid-column: 2 / -2;
+    }
+    
+    .one .blockquotes img:nth-of-type(even) {
+        grid-column: 2 / -2;
+    } 
 }
 
 @media screen and (max-width:767px) {
@@ -93,23 +108,23 @@ header blockquote {
     
     header blockquote {
         align-self: center;
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
     }
   
     .blockquotes img:nth-of-type(odd) {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
     }
     
     .blockquotes blockquote:nth-of-type(odd) {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
     }
     
     .blockquotes blockquote:nth-of-type(even) {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
     }
     
     .blockquotes img:nth-of-type(even) {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
     }
 }
 
